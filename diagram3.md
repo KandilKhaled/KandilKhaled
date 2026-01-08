@@ -53,11 +53,4 @@ flowchart TB
     classDef network fill:#e0f7fa stroke:#00796b stroke-width:2px
     class Network,RAN_Sub,Slices network
 
-    classDef ui fill:#fff9c4 stroke:#fbc02d stroke-width:2px
-    class UI,UseCases ui
-
-    classDef controller fill:#c5cae9 stroke:#303f9f stroke-width:2px
-    class Controller controller
-
-    classDef test fill:#ffccbc stroke:#bf360c stroke-width:2px
-    class Test test
+    classDef ui fill:#fff9c4 strok
