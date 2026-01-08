@@ -1,3 +1,19 @@
+# System Architecture - 5G Network Framework
+
+This diagram shows the **high-level architecture** of our academic 5G network framework project.  
+It highlights all major components, the flow of information, and how different **use cases** trigger **network configuration, slices, and automated verification**.
+
+- **UI (User Interface):** Dashboard for selecting use cases, viewing network topology, and test results.  
+- **Controller / Backend:** Processes use case selection, loads configurations, triggers network actions, and runs automated tests.  
+- **Configuration Module:** Stores predefined use cases, network profiles, and slice definitions.  
+- **Network Components:** Includes RAN (with gNodeB), Core Network, Transport Network, and network slices.  
+- **Automated Verification Module:** Executes post-configuration test scripts and returns results to the UI.  
+
+All components are mapped to **project milestones and issues**, so progress can be tracked in GitHub.
+
+---
+
+```mermaid
 flowchart TD
     %% User Interface
     UI[User Interface<br/>(Web/GUI Dashboard)<br/>Issue 2.4]
