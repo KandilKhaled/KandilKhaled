@@ -7,7 +7,6 @@ Shows components, flows, use cases, slices, and automated verification.
 
 ```mermaid
 flowchart TB
-    %% Layout: Top to Bottom
     %% User Interface
     UI[UI - Web GUI]
 
@@ -27,7 +26,7 @@ flowchart TB
     %% Network Components
     subgraph Network["5G Network Components"]
         subgraph RAN_Sub["RAN"]
-            gNB[gNodeB (gNB)]
+            gNB[gNodeB gNB]
             UE[UE Simulator optional]
         end
         Core[Core Network]
