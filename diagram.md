@@ -8,27 +8,27 @@ It highlights all major components, the flow of information, and how different u
 ```mermaid
 flowchart TD
     %% User Interface
-    UI[User Interface (Web/GUI Dashboard) - Issue 2.4]
+    UI[User Interface - Web GUI Dashboard - Issue 2.4]
     
     %% Controller / Backend
-    Controller[Controller / Backend - Handles use case selection, config, actions - Issues 2.3, 2.4]
+    Controller[Controller Backend - Handles use case selection config actions - Issues 2.3 2.4]
 
     %% Configuration Module
-    Config[Configuration Module (Use Cases, Profiles, Slices) - Issue 2.4]
+    Config[Configuration Module - Use Cases Profiles Slices - Issue 2.4]
 
     %% Network Components
     subgraph Network["5G Network Components"]
         subgraph RAN_Sub["RAN"]
-            gNB[gNodeB (gNB) - Issue 4.3]
-            UE[UE Simulator (optional)]
+            gNB[gNodeB gNB - Issue 4.3]
+            UE[UE Simulator optional]
         end
         Core[Core Network - Issue 4.3]
         Transport[Transport Network - Issue 5.3]
-        Slices[Network Slices (Slice Name, Priority, Bandwidth) - Issue 5.2]
+        Slices[Network Slices - Slice Name Priority Bandwidth - Issue 5.2]
     end
 
     %% Automated Verification
-    Test[Automated Verification Module - Run test scripts, return results - Issue 5.4]
+    Test[Automated Verification Module - Run test scripts return results - Issue 5.4]
 
     %% Use Cases
     subgraph UseCases["Use Case Selection - Issue 2.3"]
@@ -52,14 +52,14 @@ flowchart TD
     Test -->|Results| UI
 
     %% Styling
-    classDef network fill:#e0f7fa,stroke:#00796b,stroke-width:2px
+    classDef network fill:#e0f7fa stroke:#00796b stroke-width:2px
     class Network,RAN_Sub,Slices network
 
-    classDef ui fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    classDef ui fill:#fff9c4 stroke:#fbc02d stroke-width:2px
     class UI,UseCases ui
 
-    classDef controller fill:#c5cae9,stroke:#303f9f,stroke-width:2px
+    classDef controller fill:#c5cae9 stroke:#303f9f stroke-width:2px
     class Controller controller
 
-    classDef test fill:#ffccbc,stroke:#bf360c,stroke-width:2px
+    classDef test fill:#ffccbc stroke:#bf360c stroke-width:2px
     class Test test
