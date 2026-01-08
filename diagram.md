@@ -1,45 +1,37 @@
 # System Architecture - 5G Network Framework
 
-This diagram shows the **high-level architecture** of our academic 5G network framework project.  
-It highlights all major components, the flow of information, and how different **use cases** trigger **network configuration, slices, and automated verification**.
-
-- **UI (User Interface):** Dashboard for selecting use cases, viewing network topology, and test results.  
-- **Controller / Backend:** Processes use case selection, loads configurations, triggers network actions, and runs automated tests.  
-- **Configuration Module:** Stores predefined use cases, network profiles, and slice definitions.  
-- **Network Components:** Includes RAN (with gNodeB), Core Network, Transport Network, and network slices.  
-- **Automated Verification Module:** Executes post-configuration test scripts and returns results to the UI.  
-
-All components are mapped to **project milestones and issues**, so progress can be tracked in GitHub.
+This diagram shows the high-level architecture of our academic 5G network framework project.  
+It highlights all major components, the flow of information, and how different use cases trigger network configuration, slices, and automated verification.
 
 ---
 
 ```mermaid
 flowchart TD
     %% User Interface
-    UI[User Interface<br/>(Web/GUI Dashboard)<br/>Issue 2.4]
+    UI[User Interface (Web/GUI Dashboard) - Issue 2.4]
     
     %% Controller / Backend
-    Controller[Controller / Backend<br/>Handles use case selection, config, actions<br/>Issues 2.3, 2.4]
+    Controller[Controller / Backend - Handles use case selection, config, actions - Issues 2.3, 2.4]
 
     %% Configuration Module
-    Config[Configuration Module<br/>(Use Cases, Profiles, Slices)<br/>Issue 2.4]
+    Config[Configuration Module (Use Cases, Profiles, Slices) - Issue 2.4]
 
     %% Network Components
     subgraph Network["5G Network Components"]
         subgraph RAN_Sub["RAN"]
-            gNB[gNodeB (gNB)<br/>Issue 4.3]
+            gNB[gNodeB (gNB) - Issue 4.3]
             UE[UE Simulator (optional)]
         end
-        Core[Core Network<br/>Issue 4.3]
-        Transport[Transport Network<br/>Issue 5.3]
-        Slices[Network Slices<br/>(Slice Name, Priority, Bandwidth)<br/>Issue 5.2]
+        Core[Core Network - Issue 4.3]
+        Transport[Transport Network - Issue 5.3]
+        Slices[Network Slices (Slice Name, Priority, Bandwidth) - Issue 5.2]
     end
 
     %% Automated Verification
-    Test[Automated Verification Module<br/>(Run test scripts, return results)<br/>Issue 5.4]
+    Test[Automated Verification Module - Run test scripts, return results - Issue 5.4]
 
     %% Use Cases
-    subgraph UseCases["Use Case Selection<br/>Issue 2.3"]
+    subgraph UseCases["Use Case Selection - Issue 2.3"]
         UC1[Industrial IoT]
         UC2[Connected Cars]
         UC3[Smart City]
