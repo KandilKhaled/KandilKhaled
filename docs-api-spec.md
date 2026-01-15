@@ -42,7 +42,7 @@ All API responses follow this structure:
   "message": "Description of the result",
   "data": {}
 }
-
+```
 3. API Endpoints
 
 3.1 Network Topology
@@ -51,7 +51,7 @@ GET /api/topology
 Returns the current network topology and component states.
 
 Example response:
-
+```
 {
   "status": "success",
   "data": {
@@ -78,6 +78,7 @@ Example response:
     ]
   }
 }
+```
 
 3.2 Component Control
 POST /api/component/{id}/start
@@ -85,12 +86,12 @@ POST /api/component/{id}/start
 Starts a network component.
 
 Example response:
-
+```
 {
   "status": "success",
   "message": "Component started"
 }
-
+```
 
 POST /api/component/{id}/stop
 
@@ -102,7 +103,7 @@ GET /api/usecases
 Returns available predefined use cases.
 
 Example response:
-
+```
 {
   "status": "success",
   "data": [
@@ -116,17 +117,17 @@ Example response:
     }
   ]
 }
-
+```
 POST /api/usecase/activate
 
 Activates one or more use cases.
 
 Request body example:
-
+```
 {
   "useCases": ["iot", "v2x"]
 }
-
+```
 Behavior:
 
 Applies corresponding configuration and slicing rules
@@ -145,7 +146,7 @@ PUT /api/configuration
 Updates network configuration parameters.
 
 Request body example:
-
+```
 {
   "mcc": "001",
   "mnc": "01",
@@ -157,19 +158,20 @@ Request body example:
     }
   ]
 }
-
+```
 3.5 Subscriber Management (Optional)
 POST /api/subscriber
 
 Adds a subscriber profile.
 
 Request body example:
-
+```
 {
   "imsi": "001011234567891",
   "slice": "iot-slice",
   "apn": "internet"
 }
+```
 This endpoint abstracts database scripts such as open5gs-dbctl.
 
 3.6 Automated Verification
@@ -178,17 +180,17 @@ POST /api/tests/run
 Triggers automated verification tests.
 
 Request body example:
-
+```
 {
   "tests": ["latency", "throughput", "connectivity"]
 }
-
+```
 GET /api/tests/results
 
 Returns the latest test results.
 
 Example response:
-
+```
 {
   "status": "success",
   "data": [
@@ -199,7 +201,7 @@ Example response:
     }
   ]
 }
-
+```
 4. Security Considerations
 
 Security mechanisms such as authentication and authorization are out of scope. The API is assumed to run in a trusted environment.
